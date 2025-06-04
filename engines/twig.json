@@ -1,0 +1,46 @@
+{
+  "engine": "twig",
+  "file_extension": ".twig",
+  "mappings": [
+    {
+      "pattern": "{{\\$(\\w+)}}",
+      "replacement": "{{ ${1} }}"
+    },
+    {
+      "pattern": "{{tn:(\\$\\w+) \\?\\? '(.*?)'}}",
+      "replacement": "{{ ${1}|default('${2}') }}"
+    },
+    {
+      "pattern": "{{tn:(.*?) \\? (.*?) : (.*?)}}",
+      "replacement": "{{ ${1} ? ${2} : ${3} }}"
+    },
+    {
+      "pattern": "{{tn:(.*?) \\? (.*?)}}",
+      "replacement": "{{ ${1} ? ${2} : '' }}"
+    },
+    {
+      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
+      "replacement": "{{ ${1}(${2}) }}"
+    },
+    {
+      "pattern": "{{if:\\((.*?)\\)}}",
+      "replacement": "{% if ${1} %}"
+    },
+    {
+      "pattern": "{{else}}",
+      "replacement": "{% else %}"
+    },
+    {
+      "pattern": "{{endif}}",
+      "replacement": "{% endif %}"
+    },
+    {
+      "pattern": "{{foreach:\\((.*?) as (.*?)\\)}}",
+      "replacement": "{% for ${2} in ${1} %}"
+    },
+    {
+      "pattern": "{{endforeach}}",
+      "replacement": "{% endfor %}"
+    }
+  ]
+}

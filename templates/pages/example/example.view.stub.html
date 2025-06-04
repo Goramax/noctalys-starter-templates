@@ -1,0 +1,13 @@
+<p>{{$message}}</p>
+
+{{fn:render_component('form', [
+    'title' => 'Example Form',
+]);}}
+
+{{if:(isset($form_message))}}
+    <p class="form-message">{{$form_message}}</p>
+{{endif}}
+
+{{if:(isset($form_error))}}
+    <p class="form-error">{{$form_error}}</p>
+{{endif}}

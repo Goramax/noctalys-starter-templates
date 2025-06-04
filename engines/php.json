@@ -1,0 +1,38 @@
+{
+  "engine": "php",
+  "file_extension": ".php",
+  "mappings": [
+    {
+      "pattern": "{{\\$(\\w+)}}",
+      "replacement": "<?= $${1} ?>"
+    },
+    {
+      "pattern": "{{tn:(.*?)}}",
+      "replacement": "<?= ${1} ?>"
+    },
+    {
+      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
+      "replacement": "<?= ${1}(${2}) ?>"
+    },
+    {
+      "pattern": "{{if:\\((.*?)\\)}}",
+      "replacement": "<?php if (${1}): ?>"
+    },
+    {
+      "pattern": "{{else}}",
+      "replacement": "<?php else: ?>"
+    },
+    {
+      "pattern": "{{endif}}",
+      "replacement": "<?php endif; ?>"
+    },
+    {
+      "pattern": "{{foreach:\\((.*?) as (.*?)\\)}}",
+      "replacement": "<?php foreach (${1} as ${2}): ?>"
+    },
+    {
+      "pattern": "{{endforeach}}",
+      "replacement": "<?php endforeach; ?>"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "engine": "latte",
+  "file_extension": ".latte",
+  "mappings": [
+    {
+      "pattern": "{{\\$(\\w+)}}",
+      "replacement": "{$${1}}"
+    },
+    {
+      "pattern": "{{tn:(.*?)}}",
+      "replacement": "{${1}}"
+    },
+    {
+      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
+      "replacement": "{${1}(${2})}"
+    },
+    {
+      "pattern": "{{if:\\((.*?)\\)}}",
+      "replacement": "{if ${1}}"
+    },
+    {
+      "pattern": "{{else}}",
+      "replacement": "{else}"
+    },
+    {
+      "pattern": "{{endif}}",
+      "replacement": "{/if}"
+    },
+    {
+      "pattern": "{{foreach:\\((.*?) as (.*?)\\)}}",
+      "replacement": "{foreach ${1} as ${2}}"
+    },
+    {
+      "pattern": "{{endforeach}}",
+      "replacement": "{/foreach}"
+    }
+  ]
+}

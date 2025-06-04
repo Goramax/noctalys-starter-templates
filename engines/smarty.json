@@ -1,0 +1,46 @@
+{
+  "engine": "smarty",
+  "file_extension": ".tpl",
+  "mappings": [
+    {
+      "pattern": "{{\\$(\\w+)}}",
+      "replacement": "{$${1}}"
+    },
+    {
+      "pattern": "{{tn:(\\$\\w+) \\?\\? '(.*?)'}}",
+      "replacement": "{if isset($${1})}{$${1}}{else}{${2}}{/if}"
+    },
+    {
+      "pattern": "{{tn:(.*?) \\? (.*?) : (.*?)}}",
+      "replacement": "{if ${1}}{${2}}{else}{${3}}{/if}"
+    },
+    {
+      "pattern": "{{tn:(.*?) \\? (.*?)}}",
+      "replacement": "{if ${1}}{${2}}{/if}"
+    },
+    {
+      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
+      "replacement": "{${1} ${2}}"
+    },
+    {
+      "pattern": "{{if:\\((.*?)\\)}}",
+      "replacement": "{if ${1}}"
+    },
+    {
+      "pattern": "{{else}}",
+      "replacement": "{else}"
+    },
+    {
+      "pattern": "{{endif}}",
+      "replacement": "{/if}"
+    },
+    {
+      "pattern": "{{foreach:\\((.*?) as (.*?)\\)}}",
+      "replacement": "{foreach from=${1} item=${2}}"
+    },
+    {
+      "pattern": "{{endforeach}}",
+      "replacement": "{/foreach}"
+    }
+  ]
+}

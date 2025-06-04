@@ -1,0 +1,14 @@
+{{if:(!empty($posts))}}
+    <div class="blog-cards">
+        {{foreach:($posts as $post)}}
+            {{fn:render_component('blog-card', [
+                'title' => $post['title'],
+                'excerpt' => $post['excerpt'],
+                'date' => $post['date'],
+                'link' => '/blog/' . $post['id']
+            ])}}
+        {{endforeach}}
+    </div>
+{{else}}
+    <p>No post found</p>
+{{endif}}
