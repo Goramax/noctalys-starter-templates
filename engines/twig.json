@@ -19,19 +19,19 @@
       "replacement": "{{ ${1} ? ${2} : '' }}"
     },
     {
-      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
-      "replacement": "{{ ${1}(${2}) }}"
+      "pattern": "{{fn:([^}]*)}}",
+      "replacement": "{{ ${1} }}"
     },
     {
-      "pattern": "{{if:\\((.*?)\\)}}",
+      "pattern": "\\{\\{if:([\\s\\S]*?)\\}\\}",
       "replacement": "{% if ${1} %}"
     },
     {
-      "pattern": "{{else}}",
+      "pattern": "\\{\\{else\\}\\}",
       "replacement": "{% else %}"
     },
     {
-      "pattern": "{{endif}}",
+      "pattern": "\\{\\{endif\\}\\}",
       "replacement": "{% endif %}"
     },
     {

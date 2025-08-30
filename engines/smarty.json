@@ -8,30 +8,30 @@
     },
     {
       "pattern": "{{tn:(\\$\\w+) \\?\\? '(.*?)'}}",
-      "replacement": "{if isset($${1})}{$${1}}{else}{${2}}{/if}"
+      "replacement": "{if isset(${1})}{${1}}{else}${2}{/if}"
     },
     {
       "pattern": "{{tn:(.*?) \\? (.*?) : (.*?)}}",
-      "replacement": "{if ${1}}{${2}}{else}{${3}}{/if}"
+      "replacement": "{if ${1}}${2}{else}${3}{/if}"
     },
     {
       "pattern": "{{tn:(.*?) \\? (.*?)}}",
-      "replacement": "{if ${1}}{${2}}{/if}"
+      "replacement": "{if ${1}}${2}{/if}"
     },
     {
-      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
-      "replacement": "{${1} ${2}}"
+      "pattern": "{{fn:((?:[^{}]|{[^}]*})*)}}",
+      "replacement": "{${1}}"
     },
     {
-      "pattern": "{{if:\\((.*?)\\)}}",
+      "pattern": "\\{\\{if:([\\s\\S]*?)\\}\\}",
       "replacement": "{if ${1}}"
     },
     {
-      "pattern": "{{else}}",
+      "pattern": "\\{\\{else\\}\\}",
       "replacement": "{else}"
     },
     {
-      "pattern": "{{endif}}",
+      "pattern": "\\{\\{endif\\}\\}",
       "replacement": "{/if}"
     },
     {

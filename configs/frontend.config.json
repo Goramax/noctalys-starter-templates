@@ -1,0 +1,57 @@
+{
+    "app": {
+        "name": "My Noctalys App",
+        "timezone": "auto",
+        "debug": true
+    },
+    "cache" : {
+        "enabled": false,
+        "cache_folder": "cache/noctalys",
+        "router_cache": true,
+        "finder_cache": true
+    },
+    "template_engine" :
+    {
+        "engine": "no"
+    }, 
+    "router": {
+        "enabled": true,
+        "page_scan": [
+            {
+                "folder_name": "pages",
+                "path": "src"
+            }
+        ],
+        "error_page": "src/pages/error"
+    },
+    "api": {
+        "enabled": false
+    },
+    "layouts": {
+        "default": "default",
+        "sources": [
+            {
+                "folder_name": "layouts",
+                "path": "src"
+            }
+        ]
+    },
+    "components": {
+        "sources": [
+            {
+                "folder_name": "components",
+                "path": "src"
+            }
+        ]
+    },
+    "assets": {
+        "sources": [
+            {
+                "folder_name": "assets",
+                "path": "src"
+            }
+        ],
+        "styles" : ["main.scss"],
+        "scripts" : []
+    }
+}

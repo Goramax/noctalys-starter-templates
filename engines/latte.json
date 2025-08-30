@@ -3,6 +3,42 @@
   "file_extension": ".latte",
   "mappings": [
     {
+      "pattern": "\\{\\{if:([\\s\\S]*?)\\}\\}",
+      "replacement": "{if ${1}}"
+    },
+    {
+      "pattern": "\\{\\{else\\}\\}",
+      "replacement": "{else}"
+    },
+    {
+      "pattern": "\\{\\{endif\\}\\}",
+      "replacement": "{/if}"
+    },
+    {
+      "pattern": "\\{\\{render_component\\(([\\s\\S]*?)\\)\\}\\}",
+      "replacement": "{render_component($1)}"
+    },
+    {
+      "pattern": "\\{\\{svg\\((.*?)\\)\\}\\}",
+      "replacement": "{svg($1)}"
+    },
+    {
+      "pattern": "\\{\\{fn:([\\s\\S]*?)\\}\\}",
+      "replacement": "{${1}}"
+    },
+    {
+      "pattern": "{{tn:(.*?)}}",
+      "replacement": "{${1}}"
+    },
+    {
+      "pattern": "{{if:\\((.*?)\\)}}",
+      "replacement": "{if ${1}}"
+    },
+    {
+      "pattern": "{{if:\\((.*?)}}",
+      "replacement": "{if ${1}}"
+    },
+    {
       "pattern": "{{\\$(\\w+)}}",
       "replacement": "{$${1}}"
     },
@@ -11,12 +47,8 @@
       "replacement": "{${1}}"
     },
     {
-      "pattern": "{{fn:(.*?)\\((.*?)\\)}}",
-      "replacement": "{${1}(${2})}"
-    },
-    {
-      "pattern": "{{if:\\((.*?)\\)}}",
-      "replacement": "{if ${1}}"
+      "pattern": "{{fn:(.*?)}}",
+      "replacement": "{${1}}"
     },
     {
       "pattern": "{{else}}",

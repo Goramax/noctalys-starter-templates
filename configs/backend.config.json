@@ -1,0 +1,21 @@
+{
+    "app": {
+        "name": "My Noctalys App",
+        "timezone": "auto",
+        "debug": true
+    },
+    "cache" : {
+        "enabled": false,
+        "cache_folder": "cache/noctalys",
+        "api_router_cache": true,
+        "finder_cache": true
+    },
+    "router": {
+        "enabled": false
+    },
+    "api": {
+        "enabled": true,
+        "controllers_location": "src/Controllers",
+        "api_url": "/api"
+    }
+}

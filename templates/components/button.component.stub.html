@@ -1,12 +1,12 @@
-{{if:($href ?? null)}}
+{{if:$href ?? null}}
     <a href="{{$href}}"
-        class="btn btn-{{$type ?? 'primary'}}{{isset($class) ? ' ' . $class : ''}}"
+        class="btn btn-{{tn:$type ?? 'primary'}}{{tn:isset($class) ? ' ' . $class : ''}}"
         {{($blank ?? false) ? 'target="_blank" rel="noopener noreferrer"' : ''}}>
         {{tn:$text ?? 'Button'}}
     </a>
 {{else}}
-    <button type="{{$buttonType ?? 'button'}}"
-        class="btn btn-{{$type ?? 'primary'}}{{isset($class) ? ' ' . $class : ''}}">
+    <button type="{{tn:$buttonType ?? 'button'}}"
+        class="btn btn-{{tn:$type ?? 'primary'}}{{tn:isset($class) ? ' ' . $class : ''}}">
         {{tn:$text ?? 'Button'}}
     </button>
 {{endif}}
